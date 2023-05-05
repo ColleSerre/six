@@ -4,7 +4,7 @@
     "slug": "six",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/icon.jpg",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -14,20 +14,30 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app uses your camera to hold video calls",
+        "NSMicrophoneUsageDescription": "We need your microphone to hold audio and video calls"
+      },
+      "bundleIdentifier": "com.palmer.six"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.palmer.six"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c955bf9c-3db6-4382-a5fe-7c318614230f"
+      }
+    },
+    "owner": "darenpal"
   }
 }
